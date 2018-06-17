@@ -64,10 +64,10 @@ export const MarketplacePackageConfig = PackageConfig.clone().extend({
     type: Array,
     defaultValue: [{
       shopType: "merchant",
-      active: true
+      enabled: true
     }, {
       shopType: "affiliate",
-      active: false
+      enabled: false
     }]
   },
   "settings.shops.enabledShopTypes.$": {
