@@ -21,7 +21,8 @@ RUN mkdir "$APP_SOURCE_DIR/node_modules" && chown node "$APP_SOURCE_DIR/node_mod
 # Meteor updates to an NPM version without this issue.
 #RUN npm install
 RUN npm -v; node -v
-RUN sudo npm install -g npm@latest
+RUN ls -la /usr/local/lib/node_modules/; ls -la /usr/local/lib/node_modules/npm/
+RUN npm install -g npm@latest
 RUN npm -v; node -v
 RUN npm ci
 
