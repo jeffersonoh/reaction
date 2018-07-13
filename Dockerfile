@@ -20,7 +20,8 @@ RUN mkdir "$APP_SOURCE_DIR/node_modules" && chown node "$APP_SOURCE_DIR/node_mod
 # This prevents the "write after end" errors seen with this command. This will be reverted when
 # Meteor updates to an NPM version without this issue.
 #RUN npm install
-RUN npm install -g npm@latest
+RUN npm -v; node -v
+RUN sudo npm install -g npm@latest
 RUN npm -v; node -v
 RUN npm ci
 
