@@ -173,8 +173,7 @@ jobs:
       - run:
           name: Install Reaction CLI
           command: |
-            sudo npm init
-            sudo npm ci -g reaction-cli
+            sudo npm install -g reaction-cli
       - run:
           name: Load App Plugins
           command: reaction plugins load
