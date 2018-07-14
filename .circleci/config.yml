@@ -256,6 +256,8 @@ workflows:
             - build
       - docker-build:
           context: reaction-build-read
+          requires:
+            - snyk-security
       - docker-push:
           context: reaction-publish-docker
           requires:
