@@ -39,7 +39,8 @@ jobs:
             - ~/.meteor
       - run:
           name: Meteor NPM Install
-          command: npm ci
+          command: npm install
+          #command: npm ci
       # Store node_modules dependency cache.
       # Saved with package.json checksum and timestamped branch name keys.
       - save_cache:
